@@ -1,7 +1,10 @@
-# Sys_Start
+# PI_Sys_Startup
 
-Sys_Start is a PHP script used for Raspberry PI startup.
-Instead of filling the CRON with @reboot I use this script to run all the gagets I want at startup
+(In Process)
+
+
+Sys_Startup is a PHP script used for Raspberry PI startup.
+Instead of filling the CRON with @reboot I use this script to run all the gadgets I want at startup
 
 I have also included logs and log rotate using logrotate.
 
@@ -21,7 +24,10 @@ Dillinger is a cloud-enabled, mobile-ready, offline-storage, AngularJS powered H
 
 ### Installation
 
-You need Gulp installed globally:
+You'll need:
+ - PHP5
+ - PHP5-cli
+ - If using relays -[WiringPi] by Gorden
 
 ```sh
 $ npm i -g gulp
@@ -29,10 +35,19 @@ $ npm i -g gulp
 
 
 ```sh
-$ git clone [git-repo-url] dillinger
+$ git clone [git-repo-url] pi-sys-start
 $ cd dillinger
 $ npm i -d
 $ mkdir -p downloads/files/{md,html,pdf}
 $ gulp build --prod
 $ NODE_ENV=production node app
 ```
+
+[//]: # (These are reference links used in the body of this note and get stripped out when 
+the markdown processor does its job. There is no need to format nicely because it 
+shouldn't be seen. Thanks SO - 
+http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
+
+[Steggy]: <https://github.com/steggy>
+[git-repo-url]: <https://github.com/steggy/pi-sys-start.git>
+[WiringPi]: <http://wiringpi.com>
