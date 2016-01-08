@@ -32,6 +32,11 @@ readini($GLOBALS['ini_file']);
 
 initrelay();
 
+/* Start temp monitor */
+system("/home/pi/bin/templog/temp1.php -D 2>&1 &");
+
+/* Start network monitor */
+system("/root/network-monitorrpi.sh >/dev/null 2>&1 &");
 
 $GLOBALS['unitname'] = preg_replace("/\r|\n/", "", shell_exec("/bin/hostname"));
 
